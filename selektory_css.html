@@ -40,6 +40,39 @@
             }
             /* jeżeli atrybut href wewnątrz a
             zawiera w sobie fragment "reddit" */
+            a:link {
+                color: white;
+                background-color: black;
+            }
+            a:visited {
+                color: black;
+                background-color: gray;
+            }
+            input[type="text"] {
+                background-color: orange;
+            }
+            input[name*="pole"] {
+                color: white;
+            }
+            input:required {
+                border: 2px solid red;
+            }
+            input:checked {
+                margin-left: 50px;
+            }
+            input:hover {
+                margin-left: 50px;
+            }
+            p::first-letter {
+                color: blue;
+                font-size: 50px;
+            }
+            p::first-line {
+                background-color: green;
+            }
+
+
+
         </style>
     </head>
     <body>
@@ -63,10 +96,15 @@
         <article>
             Artykuł 2
         </article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eaque harum quia perspiciatis doloribus dolores illo error facilis quo aliquid. Eveniet fugiat aliquid aut laboriosam ipsa, quos maxime fuga quidem.</p>
         <a href="https://google.com">Google</a>
         <br>
         <a href="https://reddit.com">Reddit</a>
         <br>
         <a href="https://reddit.com/r/Polska">Polska</a>
+
+        <input type="text" name="pole-input">
+        <input type="text" name="pole-input2" required>
+        <input type="checkbox">Zastosuj
     </body>
 </html>
