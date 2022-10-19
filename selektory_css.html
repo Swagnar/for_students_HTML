@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            div > p {
+                color: red;
+            }
+            /* tylko których div jest
+            rodzicem */
+            h3, p {
+                font-style: italic;
+            }
+            /* zarówno h3 jak i p */
+            div b {
+                color: green;
+            }
+            /* gdziekolwiek wewnątrz div'a */
+            article ~ span {
+                color: orange;
+            }
+            /* jeżeli już istnieje article */
+            span + article {
+                color: rebeccapurple;
+            }
+            /* jeżeli article wystepuje
+            bezpośrednio za span */
+            a[href] {
+                font-size: 50px;
+            }
+            /* jezeli a posiada
+            atrybut href */
+            a[href="www.google.com"] {
+                font-weight: 900;
+            }
+            /* jeżeli atrybut href wewnątrz a
+            ma wartość www.google.com */
+            a[href*="reddit"] {
+                font-style: italic;
+            }
+            /* jeżeli atrybut href wewnątrz a
+            zawiera w sobie fragment "reddit" */
+        </style>
+    </head>
+    <body>
+        <h3>Selektor 2</h3>
+        <div>
+            <p>Selektor 1</p>
+            Test
+        </div>
+        <div>
+            <table>
+                <b>Selektor 3</b>
+            </table>
+        </div>
+        <b>Selektor 3</b>
+        <article>
+            Artykuł 1
+        </article>
+        <span>
+            Span 1
+        </span>
+        <article>
+            Artykuł 2
+        </article>
+        <a href="https://google.com">Google</a>
+        <br>
+        <a href="https://reddit.com">Reddit</a>
+        <br>
+        <a href="https://reddit.com/r/Polska">Polska</a>
+    </body>
+</html>
