@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudonauka</title>
+    <style>
+        /* 
+            :  -- pseudoklasa
+            :: -- pseudoelement
+        */
+        input {
+            border: 2px solid black;
+            margin-top: 5px;
+        }
+        /* Zostanie zastosowane dla wyłączonych inputów */
+        input:disabled {
+            border: 2px solid red;
+            background-color: rgb(77, 77, 77);
+        }
+
+        /* Zostanie zastosowane dla zaznaczonych checkboxów */
+        input:checked {
+            margin-left: 20px;
+        }
+
+        /* Zostanie zastosowane dla wymaganych pól formularza */
+        input:required {
+            margin-left: 100px
+        }
+        /* Zostanie zastosowane dla tekstu tymczasowego wewnątrz pól input */
+        input::placeholder {
+            font-weight: bold;
+            color: hotpink;
+        }
+        /* Zostanie zastosowane dla paragrafów do których zostaniemy przeniesieni za pomocą odnośników (patrz "Spis treści") */
+        p:target {
+            border: 1px solid black;
+        }
+        /* To co wyżej, tylko dla pierwszej linii paragrafu */
+        p:target::first-line {
+            background-color: gold;
+            color: red;
+        }
+        /* Dla paragrafu do którego zostaniemy przeniesieni, zostanie wstrzyknięte przed elementem p */
+        p:target::before {
+            content: "->";
+        }
+        /* To co wyżej, tylko PO elemencie */
+        p:target::after {
+            content: "<-";
+        }
+        /* Zostanie zastosowane dla pierwszego symbolu wewnątrz <p> */
+        p::first-letter {
+            color: blue;
+            font-size: 50px;
+            border: 2px solid blue;
+        }
+        /* Zostanie zastosowane dla pierwszej linii wewnątrz <p> */
+        p::first-line {
+            background-color: brown;
+        }
+        /* Zmieni symbol za pomocą którego oznaczane są elementy list <ol> i <ul> */
+        li::marker {
+            content: "†";
+        }
+        a {
+            text-decoration: none;
+        }
+        /* Dla odnośników w które już kliknęliśmy */
+        a:visited {
+            color: gray;
+        }
+        /* Dla odnośników nie odwiedzonych */
+        a:link {
+            color: red;
+            border: 1px solid yellow;
+        }
+        /* Dla drugiego elementu <span> */
+        span:nth-of-type(2) {
+            color: orange;
+        }
+        /* Dla ostatniego elementu <li> w danej rodzinie np. danego znacznika <ul> lub <ol> */
+        li:last-child {
+            color: rebeccapurple;
+        }
+        /* Dla zaznaczonego tekstu wewnątrz znacznika <li> */
+        li::selection {
+            background-color: yellow;
+            color: red;
+        } 
+    </style>
+</head>
+<body>
+    <h2>Spis treści</h2>
+    <ol>
+        <li><a href="#p1">Przejdź do pierwszego paragrafu</a></li>
+        <li><a href="#p2">Przejdź do drugiego paragrafu</a></li>
+        <li>Nigdzie nie prowadze</li>
+    </ol>
+    <form>
+        <input type="text" placeholder="haha nic tu nie wpiszesz" disabled>
+        <input type="text" required> <br>
+        <input type="checkbox">
+    </form>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus aspernatur tempore quia, animi nostrum numquam vero, eveniet quo, est deserunt facilis ad in rem dolores laborum velit veritatis exercitationem rerum? </p>
+    <ul>
+        <li>Raz</li>
+        <li>Dwa</li>
+        <li>Trzy</li>
+    </ul>
+    <a href="https://google.com">Zło</a>
+    <a href="https://amazon.com">Szatan</a><br>
+    <span>Pierwszy</span><br>
+    <span>Drugi</span><br>
+    <span>Trzeci</span><br>
+    
+    <hr>
+    <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At dolore ipsa velit sunt incidunt mollitia quia perferendis fuga nobis. Impedit architecto sint deserunt similique quibusdam velit, voluptatem provident exercitationem mollitia.</p>
+    <br>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, labore recusandae quasi nemo dolores iure eum assumenda quidem sapiente, soluta aperiam sunt earum magni perspiciatis aspernatur inventore itaque tenetur quaerat.</p>
+
+
+</body>
+</html>
