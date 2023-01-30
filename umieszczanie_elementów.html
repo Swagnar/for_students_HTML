@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #baner-l,
+    #baner-p {
+      width: 50%;
+      height: 50px;
+      float: left;
+    }
+    #baner-l {background-color: red;}
+    #baner-p {background-color: blue;}
+
+    #podbaner-l,
+    #podbaner-ś,
+    #podbaner-p {
+      height: 50px;
+      float: left;
+    }
+    #podbaner-l {
+      background-color: thistle;
+      width: 25%;
+    }
+    #podbaner-ś {
+      background-color: blueviolet;
+      width: 50%;
+    }
+    #podbaner-p {
+      background-color: brown;
+      width: 25%;
+    }
+    #lewy,
+    #prawy {
+      height: 100px;
+      float: left;
+    }
+    #lewy {
+      width: 25%;
+      background-color: yellow;
+    }
+    #prawy {
+      width: 75%;
+      background-color: yellowgreen;
+    }
+    #stopka {
+      clear: both;
+      display: grid;
+      grid-template-columns: repeat(3, 33.33%);
+      background-color: violet;
+    }
+    /*
+    .r1 {
+      width: 25%;
+      outline: thick solid black;
+      float: left;
+      text-align: center;
+    }
+    */
+    #prawy {
+      display: grid;
+      grid-template-columns: repeat(3, 25%);
+    }
+    #prawy > * {
+      outline: 1px solid black;;
+    }
+  </style>
+</head>
+<body>
+  <div id="baner">
+    <div id="baner-l">50%</div>
+    <div id="baner-p">50%</div>
+  </div>
+  <div id="podbaner">
+    <div id="podbaner-l">25%</div>
+    <div id="podbaner-ś">50%</div>
+    <div id="podbaner-p">25%</div>
+  </div>
+  <div id="panel">
+    <div id="lewy">25%</div>
+    <div id="prawy">
+      <div class="r1">1</div>
+      <div class="r1">2</div>
+      <div class="r1">3</div>
+      <!-- <br> -->
+      <div class="r1">4</div>
+      <div class="r1">5</div>
+      <div class="r1">6</div>
+      <!-- <br> -->
+      <div class="r1">7</div>
+      <div class="r1">8</div>
+      <div class="r1">9</div>
+    </div>
+  </div>
+  <div id="stopka">
+    <div id="stopka-l">33.33%</div>
+    <div id="stopka-ś">33.33%</div>
+    <div id="stopka-p">33.33%</div>
+  </div>
+</body>
+</html>
